@@ -13,7 +13,7 @@ pipeline {
         )*/
         string(
             name: 'stage', 
-            defaultValue: '', 
+            defaultValue: ' ', 
             description='stage'
         )
     }

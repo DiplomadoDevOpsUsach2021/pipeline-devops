@@ -10,8 +10,8 @@ pipeline {
             name:'compileTool',
             choices: ['Maven', 'Gradle'],
             description: 'Seleccione herramienta de compilacion'
-        ),
-        string(name: 'stage', defaultValue: '', descripcion='stage')
+        )
+        string(name: 'stage', defaultValue: '', description='stage')
     }
     stages {
         stage("Pipeline"){

@@ -15,12 +15,12 @@ def call(){
         //compilar maven
         //def executor = load "maven.groovy"
         //executor.call()
-    maven.call(params.stage);
+      maven.call();
     }else{
         //compilar gradle
         //def executor = load "gradle.groovy"
         //executor.call()
-    gradle.call(params.stage)
+      gradle.call()
     }
     
   }

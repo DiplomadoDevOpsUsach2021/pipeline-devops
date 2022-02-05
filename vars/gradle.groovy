@@ -3,7 +3,8 @@
 	def ejecucion = load 'script.groovy'
 	ejecucion.call()
 */
-def call(string stage){
+def call(){
+    string stage = params.stage
     String[] stageArray;
     stageArray = stage.split(";")
 

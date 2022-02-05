@@ -11,7 +11,11 @@ pipeline {
             choices: ['Maven', 'Gradle'],
             description: 'Seleccione herramienta de compilacion'
         )
-        string(name: 'stage', defaultValue: '', description='stage')
+        string(
+            name: 'stage', 
+            defaultValue: '', 
+            description='stage'
+        )
     }
     stages {
         stage("Pipeline"){

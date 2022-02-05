@@ -6,11 +6,11 @@ pipeline {
         NEXUS_PASSWORD     = credentials('NEXUS-PASSWPRD')
     }
     parameters {
-        choice(
+        /*choice(
             name:'compileTool',
             choices: ['Maven', 'Gradle'],
             description: 'Seleccione herramienta de compilacion'
-        )
+        )*/
         string(
             name: 'stage', 
             defaultValue: '', 
@@ -21,7 +21,10 @@ pipeline {
         stage("Pipeline"){
             steps {
                 script{
-                  switch(params.compileTool)
+                    def ejecucion = load 'maven.groovy'
+                            ejecucion.call()
+
+                  /* switch(params.compileTool)
                     {
                         case 'Maven':
                             def ejecucion = load 'maven.groovy'
@@ -32,6 +35,7 @@ pipeline {
                             ejecucion.call()
                         break;
                     }
+                    */
                 }
             }
         }
